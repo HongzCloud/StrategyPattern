@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Common Text Field View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CommonTextFieldViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="CommonTextFieldViewController" customModule="StrategyPattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6l-5P-Y1f">
+                                <rect key="frame" x="24" y="274" width="345" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XWU-9w-XUy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="ctaButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wu0-Vg-dHx"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3G-gw-Kcv" customClass="TextFieldView" customModule="StrategyPattern" customModuleProvider="target">
+                                <rect key="frame" x="24" y="79" width="345" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3S0-wI-IPg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="q6l-5P-Y1f" firstAttribute="trailing" secondItem="q3G-gw-Kcv" secondAttribute="trailing" id="EnV-Wk-Tc9"/>
+                            <constraint firstItem="q6l-5P-Y1f" firstAttribute="leading" secondItem="q3G-gw-Kcv" secondAttribute="leading" id="Lr4-FG-Rsa"/>
+                            <constraint firstItem="q3G-gw-Kcv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="R3C-49-Drq"/>
+                            <constraint firstItem="q6l-5P-Y1f" firstAttribute="centerX" secondItem="q3G-gw-Kcv" secondAttribute="centerX" id="UHj-KM-ESl"/>
+                            <constraint firstItem="q3G-gw-Kcv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Zpj-xh-ta7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="q3G-gw-Kcv" secondAttribute="trailing" constant="24" id="wts-AL-HeF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="q6l-5P-Y1f" secondAttribute="bottom" constant="504" id="zO6-OQ-R6f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ctaButton" destination="q6l-5P-Y1f" id="b1K-MG-5Ec"/>
+                        <outlet property="textFieldView" destination="q3G-gw-Kcv" id="8Xv-wP-a7Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81.679389312977094" y="-15.492957746478874"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
